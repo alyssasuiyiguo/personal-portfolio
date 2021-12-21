@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&family=Palanquin+Dark:wght@700&family=Palanquin:wght@500&display=swap');
+h4{
+    font-family: 'Overpass Mono', monospace;
+}
+
+h1{
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 64px;
+}
+
+p{
+    font-family: 'Palanquin', sans-serif;
+}
