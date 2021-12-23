@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&family=Palanquin+Dark:wght@700&family=Palanquin:wght@500&display=swap');
+
 h4{
     font-family: 'Overpass Mono', monospace;
 }
@@ -10,4 +11,40 @@ h1{
 
 p{
     font-family: 'Palanquin', sans-serif;
+}
+
+header ol{
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: right;
+    justify-content: right;
+}
+
+header li{
+    counter-increment: my-awesome-counter;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    padding: 0 10px;
+    font-family: 'Overpass Mono', monospace;
+}
+
+header li a{
+    text-decoration: none;
+    color: #eeded3;
+}
+
+header li::before {
+    content: "0" counter(my-awesome-counter) ". ";
+    color: #d54864;
+    font-family: 'Overpass Mono', monospace;
+  }
+
+header button{
+    margin-left: 10px;
+    color: #d54864;
+    border: 2px solid #d54864;
+    background: none;
 }
