@@ -1,16 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&family=Palanquin+Dark:wght@700&family=Palanquin:wght@500&display=swap');
 
+body{
+    background-color: #1e130b;
+}
+
 h4{
     font-family: 'Overpass Mono', monospace;
+    color:#d54864;
+    margin: 0;
 }
 
 h1{
     font-family: 'Palanquin Dark', sans-serif;
     font-size: 64px;
+    color:#eeded3;
+    margin: 0;
 }
 
 p{
     font-family: 'Palanquin', sans-serif;
+    color: #debda6;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    padding: 10px;
+    border: 2px solid #d54864;
+    background: none;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    display: inline-block;
+}
+
+button a{
+    color:#d54864;
 }
 
 header ol{
@@ -32,7 +59,6 @@ header li{
 }
 
 header li a{
-    text-decoration: none;
     color: #eeded3;
 }
 
@@ -43,8 +69,60 @@ header li::before {
   }
 
 header button{
-    margin-left: 10px;
-    color: #d54864;
-    border: 2px solid #d54864;
-    background: none;
+    margin-left: 20px;
+}
+
+.left-sidebar{
+    height: fit-content; /* Full-height: remove this if you want "auto" height */
+    width: fit-content; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    bottom: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+  padding-bottom: 20px;
+  text-align: center;
+  padding-left: 40px;
+}
+
+#social-links{
+    text-align: center;
+    bottom: 0;
+    display: block;
+}
+
+#social-links ul {list-style: none; padding-left:0;} li {display: block}
+
+.main-page {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-right: 160px;
+    padding: 0px 10px;
+  }
+
+.right-sidebar{
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}
+
+.right-sidebar2{
+    padding-bottom: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+}
+
+.right-sidebar a{
+    color: #debda6;
+    font-family: 'Overpass Mono', monospace;
+}
+
+.vl {
+    border-left: 1px solid #debda6;
+    height: 200px;
+    display: inline-block;
 }
