@@ -17,6 +17,12 @@ h1{
     margin: 0;
 }
 
+h3{
+        font-family: 'Palanquin Dark', sans-serif;
+        color:#E9D3C4;
+        margin: 0;
+}
+
 p{
     font-family: 'Palanquin', sans-serif;
     color: #debda6;
@@ -26,6 +32,21 @@ p{
 a{
     text-decoration: none;
 }
+
+ol{
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+
+ol li{
+    counter-increment: my-awesome-counter;
+}
+
+ol li::before {
+    content: "0" counter(my-awesome-counter) ". ";
+    color: #d54864;
+    font-family: 'Overpass Mono', monospace;
+  }
 
 button{
     padding: 10px;
@@ -40,9 +61,16 @@ button a{
     color:#d54864;
 }
 
+hr{
+    width: 7cm;
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #debda6;
+    border: none;
+    height: 1px;
+}
+
 header ol{
-    list-style: none;
-    counter-reset: my-awesome-counter;
     display: flex;
     flex-wrap: wrap;
     align-items: right;
@@ -50,7 +78,6 @@ header ol{
 }
 
 header li{
-    counter-increment: my-awesome-counter;
     display: flex;
     flex-wrap: wrap;
     margin: 0 10px;
@@ -61,12 +88,6 @@ header li{
 header li a{
     color: #eeded3;
 }
-
-header li::before {
-    content: "0" counter(my-awesome-counter) ". ";
-    color: #d54864;
-    font-family: 'Overpass Mono', monospace;
-  }
 
 header button{
     margin-left: 20px;
@@ -90,7 +111,12 @@ header button{
     display: block;
 }
 
-#social-links ul {list-style: none; padding-left:0;} li {display: block}
+#social-links ul {list-style: none; padding-left:0; padding-bottom:0;} li {display: block; padding-bottom: 16px;}
+
+#social-links img{
+    width: 24px;
+    height: 24px;
+}
 
 .main-page {
     margin-left: 160px; /* Same as the width of the sidebar */
@@ -125,4 +151,17 @@ header button{
     border-left: 1px solid #debda6;
     height: 200px;
     display: inline-block;
+}
+
+.about-me{
+    padding-top: 80px;
+    display: flex;
+}
+
+.about-me-text{
+    flex: 1;
+}
+
+.about-me-pic{
+    flex: 1;
 }
