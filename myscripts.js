@@ -24,5 +24,5 @@ function display (selected)
   {
       texttoshow="Text related to dance";
   }
-  document.getElementById("thetext").innerHTML = texttoshow;
+  document.getElementById("thetext").innerText = texttoshow;
   }

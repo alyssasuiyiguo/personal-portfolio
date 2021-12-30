@@ -205,7 +205,6 @@ header button{
 .clubs-and-experience{
     padding-top: 80px;
     margin-right: 250px;
-    float: right;
 }
 
 /* The side navigation menu */
@@ -266,6 +265,12 @@ header button{
       text-align: center;
       float: none;
     }
+  }
+
+  .content{
+    font-family: 'Palanquin', sans-serif;
+    color: #debda6;
+    font-size: 16px;
   }
 
   .projects a img{
