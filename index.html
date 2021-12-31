@@ -88,15 +88,19 @@
         <div class="clubs-and-experience" id="experience">
             <li style="font-size: 30px;"><h3 style="display: inline; font-size: 36px;">Clubs and Experience</h3><hr></li>
             <div class="sidebar" style="display: table-cell;">
-                <button onclick = "display('mathsoc')" class="active">MathSoc</button>
-                <button onclick="display('pump')">PuMP</button>
-                <button onclick="display('camp-explore')">Camp Explore</button>
-                <button onclick="display('fffto')">FFFTO</button>
-                <button onclick="display('stuco')">Student Council</button>
-                <button onclick="display('dance')">Yang Yang Dance Studio</button>
+                <button onclick = "display('mathsoc');changecl('mathsoc')" id="mathsoc" class="active">MathSoc</button>
+                <button onclick="display('pump');changecl('pump')" id="pump">PuMP</button>
+                <button onclick="display('camp-explore');changecl('camp-explore')" id="camp-explore">Camp Explore</button>
+                <button onclick="display('fffto');changecl('fffto')" id="fffto">FFFTO</button>
+                <button onclick="display('stuco');changecl('stuco')" id="stuco">Student Council</button>
+                <button onclick="display('dance');changecl('dance')" id="dance">Yang Yang Dance Studio</button>
             </div>
             
-            <div class="content" style="display: table-cell;" id="thetext"></div>
+            <div class="content" style="display: table-cell;">
+                <p id="experience-title">Website Developer</p>
+                <p id="thetext">the text related to mathsoc should be displayed</p>
+                <p id="languages">Wordpress • HTML • CSS • Figma </p>
+            </div>
         </div>
 
         <div class="projects" id="projects">

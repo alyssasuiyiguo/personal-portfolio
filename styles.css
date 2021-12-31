@@ -204,7 +204,6 @@ header button{
 
 .clubs-and-experience{
     padding-top: 80px;
-    margin-right: 250px;
 }
 
 /* The side navigation menu */
@@ -215,6 +214,7 @@ header button{
     height: 100%;
     overflow: auto;
     float: left;
+    border: 1px solid rgb(213, 72, 100, 0.3);
   }
   
   /* Sidebar links */
@@ -242,11 +242,6 @@ header button{
   }
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div.content {
-    margin-left: 210px;
-    padding: 1px 16px;
-    height: 400px;
-  }
   
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 700px) {
@@ -267,10 +262,29 @@ header button{
     }
   }
 
-  .content{
+  .content {
+    border: 1px solid rgb(213, 72, 100, 0.3);
+    margin-left: 210px;
+    padding: 5px 16px;
+    height: 322px;
+    width: 500px;
     font-family: 'Palanquin', sans-serif;
     color: #debda6;
     font-size: 16px;
+  }
+
+  .content #experience-title {
+    text-decoration: underline;
+    padding-bottom: 3%;
+    font-family: 'Overpass Mono', monospace;
+    color:#d54864;
+  }
+
+  .content #languages {
+    font-family: 'Overpass Mono', monospace;
+    color:#d54864;
+    font-size: 14px;
+    /*bottom: 0;*/
   }
 
   .projects a img{
