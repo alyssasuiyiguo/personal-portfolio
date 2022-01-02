@@ -4,115 +4,132 @@ body{
     background-color: #1e130b;
 }
 
+/****************FONT STYLING******************************/
+/*accents*/
 h4{
     font-family: 'Overpass Mono', monospace;
     color:#d54864;
     margin: 0;
+    font-size: 1.5vw; /**vw = view-width: expressed as percentage of screen size (i.e. 1vw = 1% of screen's width)**/
 }
 
+/*title*/
 h1{
     font-family: 'Palanquin Dark', sans-serif;
-    font-size: 64px;
+    font-size: 5vw;
     color:#eeded3;
     margin: 0;
 }
 
+/*subtitles*/
 h3{
         font-family: 'Palanquin Dark', sans-serif;
         color:#E9D3C4;
         margin: 0;
-        font-size: 30px;
+        font-size: 2.5vw;
+        display: inline;
 }
 
+/*project dates*/
 h6{
     font-family: 'Overpass Mono', monospace;
     color:#d54864;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 p{
     font-family: 'Palanquin', sans-serif;
     color: #debda6;
     margin: 0;
+    font-size: 1vw;
 }
 
+/*******************STYLING ORDERED LIST***********************/
+ol{
+  list-style: none;
+  counter-reset: my-counter; /**give counter a name**/
+}
+
+ol li{
+  counter-increment: my-counter;
+}
+
+.main-page ol li::before{
+font-size: 2.5vw;
+}
+
+ol li::before {
+  content: "0" counter(my-counter) ". ";
+  color: #d54864;
+  font-family: 'Overpass Mono', monospace;
+}
+
+/*************OTHER BASIC ELEMENTS****************************/
 a{
     text-decoration: none;
 }
 
-ol{
-    list-style: none;
-    counter-reset: my-awesome-counter;
-}
-
-ol li{
-    counter-increment: my-awesome-counter;
-}
-
-ol li::before {
-    content: "0" counter(my-awesome-counter) ". ";
-    color: #d54864;
-    font-family: 'Overpass Mono', monospace;
-  }
-
 button{
-    padding: 10px;
-    border: 2px solid #d54864;
-    background: none;
-    font-family: 'Overpass Mono', monospace;
-    font-size: 16px;
-    display: inline-block;
+  padding: 0.8vw;
+  border: 0.1vw solid #d54864;
+  background: none;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 1vw;
+  display: inline-block;
 }
 
 button a{
-    color:#d54864;
+  color:#d54864;
 }
 
 hr{
-    width: 7cm;
-    display: inline-block;
-    margin-left: 10px;
-    background-color: #debda6;
-    border: none;
-    height: 1px;
+  width: 7cm;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #debda6;
+  border: none;
+  height: 1px;
 }
 
-/* width */
+/*******************SCROLLBAR***********************************/
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.8vw; /*scrollbar width**/
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
-    background: #2D1D11;
+    background: #2D1D11; /**scrollbar background**/
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(222, 189, 166, 0.8);
+    background: rgb(222, 189, 166, 0.8); /**actual scrolling section**/
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(222, 189, 166, 0.5);
+    background: rgb(222, 189, 166, 0.5); /**different colour on hover**/
   }
 
+/********************HEADER*****************************************/
 nav {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /**keeps everything on the same line**/
+  justify-content: space-between; /**puts elements on opposite sides**/
 }
 
 header nav>a{
-  display: inline-block;
-  max-width: 8%;
-  height: auto;
+  display: inline-block; /**<a> display is inline by default, but inline displays cannot have their widths/heights adjusted**/
+  max-width: 8%; 
+  height: auto; /**keeps the container small, setting width and height like so lets you create responsive sizes**/
   margin-left: 1%;
   margin-top: 1%;
 }
 
+header nav>a img{
+  max-width: 40%; 
+  height: auto;
+}
+
 .nav-bar{
-  display: inline-block;
+  display: inline-block; /**without this it goes to the next line**/
   text-align: right;
 }
 
@@ -126,97 +143,101 @@ header ol{
 header li{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 10px;
-    padding: 0 10px;
+    margin: 0 0.8vw;
+    padding: 0 0.8vw;
     font-family: 'Overpass Mono', monospace;
+    font-size: 1.1vw;
 }
 
 header li a{
-    color: #eeded3;
+    color: #debda6;
 }
 
 header button{
-    margin-left: 20px;
+    margin-left: 1.6vw;
 }
 
+/******************SIDEBAR AND BASIC LAYOUT************************************/
 .left-sidebar{
-    height: fit-content; /* Full-height: remove this if you want "auto" height */
-    width: fit-content; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    bottom: 0; /* Stay at the top */
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-  padding-bottom: 20px;
+  height: fit-content;
+  width: fit-content; /**makes it more responsive**/
+  position: fixed; /**doesn't move as user scrolls page**/
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden; /**disables horizontal scrollbar**/
+  padding-bottom: 1.6vw;
   text-align: center;
-  padding-left: 40px;
+  padding-left: 3.2vw;
 }
 
 #social-links{
-    text-align: center;
-    bottom: 0;
-    display: block;
+  text-align: center;
+  bottom: 0;
+  display: block;
 }
 
-#social-links ul {list-style: none; padding-left:0; padding-bottom:0;} li {display: block; padding-bottom: 16px;}
+#social-links ul {list-style: none; padding-left:0; padding-bottom:0;} li {display: block; padding-bottom: 1.3vw;}
 
 #social-links img{
-    width: 24px;
-    height: 24px;
+  width: 2vw;
+  height: 2vw;
 }
 
 .main-page {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    margin-right: 160px;
-    padding: 0px 10px;
-  }
+  margin-left: 8vw;
+  margin-right: 8vw;
+  padding: 0px 0.8vw;
+}
 
 .right-sidebar{
-    height: fit-content;
-    width: fit-content;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    overflow-x: hidden;
-    padding-bottom: 20px;
-    padding-right: 40px;
+  height: fit-content;
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-bottom: 1.6vw;
+  padding-right: 3.2vw;
 }
 
 .right-sidebar2{
-    padding-bottom: 20px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    text-align: center;
+  padding-bottom: 1.6vw;
+  writing-mode: vertical-rl; /**makes writing vertical**/
+  text-orientation: mixed; /**orients text sideways**/
+  text-align: center;
 }
 
 .right-sidebar a{
-    color: #debda6;
-    font-family: 'Overpass Mono', monospace;
+  color: #debda6;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 1vw;
 }
 
 .vl {
-    border-left: 1px solid #debda6;
-    height: 200px;
-    display: inline-block;
+  border-left: 0.05vw solid #debda6;
+  height: 16vw;
+  display: inline-block;
 }
 
+/****************************ABOUT ME SECTION******************************/
 .about-me{
-    padding-top: 80px;
-    display: flex;
+  padding-top: 6vw;
+  display: flex;
 }
 
 .about-me-text{
-    flex: 1;
+  flex: 1;
 }
 
 .about-me-text a{
-    text-decoration: underline;
-    color:#d54864;
+  text-decoration: underline;
+  color:#d54864;
 }
 
 .about-me-pic{
     flex: 1;
     vertical-align: middle;
-    padding-left: 20px;
+    padding-left: 1.6vw;
 }
 
 .about-me-pic img{
@@ -227,48 +248,49 @@ header button{
   padding-top: 10%;
 }
 
+/***************CLUBS AND EXPERIENCE SECTION************************************/
+
 .clubs-and-experience{
-    padding-top: 80px;
-    padding-bottom: 80px;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
 }
 
-/* The side navigation menu */
+/* Sidebar stuff */
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    height: 100%;
-    overflow: auto;
-    float: left;
-    border: 1px solid rgb(213, 72, 100, 0.3);
-  }
+  margin: 0;
+  display: table-cell;
+  padding: 0;
+  width: 15vw;
+  height: 100%;
+  overflow: auto;
+  float: left;
+  border: 0.05vw solid rgb(213, 72, 100, 0.3);
+}
   
-  /* Sidebar links */
-  .sidebar button {
-    display: block;
-    color: #debda6;
-    padding: 16px;
-    text-decoration: none;
-    font-family: 'Overpass Mono', monospace;
-    width: 100%;
-    border: none;
-  }
+.sidebar button {
+  display: block;
+  color: #debda6;
+  padding: 1.2vw;
+  text-decoration: none;
+  font-family: 'Overpass Mono', monospace;
+  width: 100%;
+  border: none;
+}
   
   /* Active/current link */
-  .sidebar button.active {
-    background-color: rgb(222, 189, 166, 0.1);
-    color: #d54864;
-    border-left: 5px solid #d54864;;
-  }
+.sidebar button.active {
+  background-color: rgb(222, 189, 166, 0.1);
+  color: #d54864;
+  border-left: 0.4vw solid #d54864;;
+}
   
-  /* Links on mouse-over */
-  .sidebar button:hover:not(.active) {
-    background-color: rgb(222, 189, 166, 0.1);
-    color: #d54864;
-  }
-  
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  
+.sidebar button:hover:not(.active) { /**hover but not current button**/
+  background-color: rgb(222, 189, 166, 0.1);
+  color: #d54864;
+}
+
+/**need to revisit this**/
+
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 700px) {
     .sidebar {
@@ -288,15 +310,19 @@ header button{
     }
   }
 
+/*****************/
+
+  /**Main content of sidebar**/
   .content {
-    border: 1px solid rgb(213, 72, 100, 0.3);
-    margin-left: 210px;
-    padding: 5px 16px;
-    height: 322px;
-    width: 500px;
+    border: 0.05vw solid rgb(213, 72, 100, 0.3);
+    margin-left: 15vw;
+    padding: 0.3vw 1vw;
+    height: 22.8vw;
+    width: 40vw;
     font-family: 'Palanquin', sans-serif;
     color: #debda6;
-    font-size: 16px;
+    font-size: 1vw;
+    display: table-cell;
   }
 
   .content #experience-title {
@@ -304,28 +330,31 @@ header button{
     padding-bottom: 3%;
     font-family: 'Overpass Mono', monospace;
     color:#d54864;
+    font-size: 1.2vw;
   }
 
   .content #languages {
     font-family: 'Overpass Mono', monospace;
     color:#d54864;
-    font-size: 14px;
-    /*bottom: 0;*/
+    font-size: 1.1vw;
   }
 
+  /*********************PROJECTS SECTION***************************/
+
   .projects a img{
-    width: 24px;
-    height: 24px;
-    margin-left: 15px;
+    width: 1.6vw;
+    height: 1.6vw;
+    margin-left: 1vw;
   }
 
   .project{
       display: flex;
+      margin-bottom: 8vw;
   }
 
   .project-text{
       flex: 1;
-      padding-top: 15px;
+      padding-top: 1vw;
       vertical-align: middle;
   }
 
@@ -339,8 +368,8 @@ header button{
       position: absolute;
       top: 0;
       left: 0;
-      padding-top: 8px;
-      padding-left: 8px;
+      padding-top: 0.5vw;
+      padding-left: 0.5vw;
       transition: .5s ease;
       background-color: rgb(30, 19, 11, 0.9);
       height: 100%;
@@ -353,60 +382,62 @@ header button{
   }
     
   .project-pic img{
-      width: 100%;
-     height: 340px;
-     z-index: 1;
-     object-fit: cover;
+    width: 100%;
+    height: 25vw;
+    z-index: 1;
+    object-fit: cover;
   }
 
   .project-text-right{
-      text-align: right;
+    text-align: right;
   }
 
   .project-text-left{
-      text-align: left;
+    text-align: left;
   }
 
   .project-text-right .project-details{
-      z-index: 2;
-      position: absolute;
-      right: 160px;
-      width: 50%;
-  }
-
-  .project-details p{
-    background-color:#d54864;
-    padding: 10px;
-  }
-
-  .project-text-right .project-details p{
-    padding-right: 20px;
-  }
-
-  .project-text-left .project-details p{
-      padding-left: 20px;
+    z-index: 2;
+    position: absolute;
+    right: 8.5vw;
+    width: 50%;
   }
 
   .project-text-left .project-details{
     z-index: 2;
     position: absolute;
-    left: 215px;
+    left: 11vw;
     width: 50%;
-}
+  }
+
+  .project-details p{
+    background-color:#d54864;
+    padding: 0.8vw;
+  }
+
+  .project-text-right .project-details p{
+    padding-right: 1.6vw;
+  }
+
+  .project-text-left .project-details p{
+      padding-left: 1.6vw;
+  }
+
+/*****************AWARDS AND ACHIEVEMENTS SECTION*********************/
 
 .awards-and-acheivements{
     padding-top: 4%;
 }
 
 .awards-icons img{
-    height: 180px;
-    width: 140px;
-    margin-right: 210px;
+    height: 13.6vw;
+    width: 11vw;
+    margin-right: 14vw;
     margin-bottom: 0;
 }
 
 .awards-shelf{
-    margin-top: 35px;
+    margin-top: 2.4vw;
 }
 
 .trophy{
@@ -415,16 +446,16 @@ header button{
 }
 
 .trophy-hover-text{
-    position: absolute;
-    left: 20px;
-    padding: 8px;
-    transition: .5s ease;
-    background-color:rgb(213, 72, 100, 0.8);
-    height: 180px;
-    width: 300px;
-    overflow: auto;
-    display: inline;
-    opacity: 0;
+  position: absolute;
+  left: 0.9vw;
+  padding: 0.5vw;
+  transition: .5s ease;
+  background-color:rgb(213, 72, 100, 0.8);
+  height: 13vw;
+  width: 20vw;
+  overflow: auto;
+  display: inline;
+  opacity: 0;
 }
 
 .trophy:hover .trophy-hover-text{
@@ -438,12 +469,12 @@ header button{
 
 .cap-hover-text{
   position: absolute;
-  left: 20px;
-  padding: 8px;
+  left: 0.9vw;
+  padding: 0.5vw;
   transition: .5s ease;
   background-color:rgb(213, 72, 100, 0.8);
-  height: 180px;
-  width: 300px;
+  height: 13vw;
+  width: 20vw;
   overflow: auto;
   display: inline;
   opacity: 0;
@@ -460,11 +491,12 @@ header button{
 
 .money-hover-text{
   position: absolute;
-  padding: 8px;
+  left: 0.9vw;
+  padding: 0.5vw;
   transition: .5s ease;
   background-color:rgb(213, 72, 100, 0.8);
-  height: 180px;
-  width: 280px;
+  height: 13vw;
+  width: 20vw;
   overflow: auto;
   display: inline;
   opacity: 0;
@@ -477,21 +509,22 @@ header button{
 .awards-shelf hr{
     width: 100%;
     float: top;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 0.8vw;
+    margin-top: 0.5vw;
     background-color: rgb(222, 189, 166, 0.5);
     border: none;
-    height: 10px;
+    height: 0.8vw;
 }
 
 .award-hover::-webkit-scrollbar {
-    width: 7px;
+    width: 0.5vw;
   }
 
 .award-hover ul li::before{
   content: "\2022";
   color: #debda6;
-  font-weight: bold;
+  font-size: 0.8vw;
+  margin-right: 0.2vw;
 }
 
 .award-hover ul li{
@@ -502,14 +535,18 @@ header button{
 }
 
 .award-hover ul{
-  padding: 0;
   margin: 0;
-  margin-left: 3px;
+  padding: 0;
 }
 
+/******************CONTACT ME SECTION***************************/
   .contact-me{
       text-align: center;
       padding-top: 6%;
+  }
+
+  .contact-me>li{
+    counter-increment: my-counter -13;
   }
 
  .contact-me ul{
@@ -524,6 +561,8 @@ header button{
     color: #d54864;
     font-weight: bold;
     display: inline-block;
+    font-size: 1.3vw;
+    margin-right: 1.1vw;
   }
 
   .contact-me ul li{
@@ -538,9 +577,9 @@ header button{
 
   .contact-form{
     background-color: rgb(222, 189, 166, 0.1);
-    border: 1px solid rgb(222, 189, 166, 0.1);
-    border-radius: 4px;
-    padding: 10px;
+    border: 0.05vw solid rgb(222, 189, 166, 0.1);
+    border-radius: 0.4vw;
+    padding: 0.8vw;
     padding-top: 0;
     margin-top: 4%;
   }
@@ -553,41 +592,33 @@ header button{
 
   /* Style inputs with type="text", select elements and textareas */
 input[type=text], input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #debda6;
-    border-radius: 4px; /* Rounded borders */
+    width: 100%;
+    padding: 0.8vw; 
+    border: 0.05vw solid #debda6;
+    border-radius: 0.4vw; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin-top: 0.3vw; 
+    margin-bottom: 1vw; 
+    resize: vertical /* Allow the user to vertically resize the textarea */
   }
 
   input, textarea::placeholder{
       font-family: 'Overpass Mono', monospace;
   }
   
-  /* Style the submit button with a specific background color etc */
+  /* Style submit button */
   input[type=submit] {
     background-color: #d54864;
     color: #debda6;
-    padding: 12px 20px;
+    padding: 0.8vw 1.5vw;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.4vw;
     cursor: pointer;
     font-family: 'Overpass Mono', monospace;
   }
   
-  /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
     background-color:rgb(213, 72, 100, 0.5);
   }
   
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-
 
