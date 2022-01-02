@@ -98,6 +98,12 @@ hr{
     background: rgb(222, 189, 166, 0.5);
   }
 
+header nav>a{
+  width: 10px;
+  height: 10px;
+  background: black;
+  overflow: hidden;
+}
 header ol{
     display: flex;
     flex-wrap: wrap;
@@ -197,9 +203,16 @@ header button{
 
 .about-me-pic{
     flex: 1;
-    height: 50%;
     vertical-align: middle;
     padding-left: 20px;
+}
+
+.about-me-pic img{
+  height: auto;
+  max-width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 10%;
 }
 
 .clubs-and-experience{
@@ -390,12 +403,12 @@ header button{
 
 .trophy-hover-text{
     position: absolute;
-    left: 160px;
+    left: 20px;
     padding: 8px;
     transition: .5s ease;
-    background-color:rgb(213, 72, 100, 0.5);
+    background-color:rgb(213, 72, 100, 0.8);
     height: 180px;
-    width: 160px;
+    width: 300px;
     overflow: auto;
     display: inline;
     opacity: 0;
@@ -411,16 +424,16 @@ header button{
 }
 
 .cap-hover-text{
-    position: absolute;
-    left: 160px;
-    padding: 8px;
-    transition: .5s ease;
-    background-color:rgb(213, 72, 100, 0.5);
-    height: 180px;
-    width: 160px;
-    overflow: auto;
-    display: inline;
-    opacity: 0;
+  position: absolute;
+  left: 20px;
+  padding: 8px;
+  transition: .5s ease;
+  background-color:rgb(213, 72, 100, 0.8);
+  height: 180px;
+  width: 300px;
+  overflow: auto;
+  display: inline;
+  opacity: 0;
 }
 
 .grad-cap:hover .cap-hover-text{
@@ -433,16 +446,15 @@ header button{
 }
 
 .money-hover-text{
-    position: absolute;
-    left: 160px;
-    padding: 8px;
-    transition: .5s ease;
-    background-color:rgb(213, 72, 100, 0.5);
-    height: 180px;
-    width: 160px;
-    overflow: auto;
-    display: inline;
-    opacity: 0;
+  position: absolute;
+  padding: 8px;
+  transition: .5s ease;
+  background-color:rgb(213, 72, 100, 0.8);
+  height: 180px;
+  width: 280px;
+  overflow: auto;
+  display: inline;
+  opacity: 0;
 }
 
 .money:hover .money-hover-text{
@@ -462,6 +474,25 @@ header button{
 .award-hover::-webkit-scrollbar {
     width: 7px;
   }
+
+.award-hover ul li::before{
+  content: "\2022";
+  color: #debda6;
+  font-weight: bold;
+}
+
+.award-hover ul li{
+  font-family: 'Palanquin', sans-serif;
+  color: #debda6;
+  padding: 0;
+  margin: 0;
+}
+
+.award-hover ul{
+  padding: 0;
+  margin: 0;
+  margin-left: 3px;
+}
 
   .contact-me{
       text-align: center;
