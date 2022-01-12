@@ -322,7 +322,20 @@ header button{
     font-family: 'Palanquin', sans-serif;
     color: #debda6;
     font-size: 1vw;
-    display: table-cell;
+    overflow: auto;
+  }
+
+  .content iframe{
+    width: 25vw;
+    height: 15vw;
+    overflow: auto;
+    margin-top: 1vw;
+    border: none;
+    display: none;
+  }
+
+  .content iframe.active{
+    display: inline;
   }
 
   .content #experience-title {
@@ -337,6 +350,7 @@ header button{
     font-family: 'Overpass Mono', monospace;
     color:#d54864;
     font-size: 1.1vw;
+    margin-top: 1vw;
   }
 
   /*********************PROJECTS SECTION***************************/
@@ -623,4 +637,6 @@ input[type=text], input[type=email], select, textarea {
     background-color:rgb(213, 72, 100, 0.5);
   }
   
+  
+  /***************** RESPONSIVE DESIGN *************/
 

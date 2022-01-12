@@ -42,6 +42,7 @@ function display (selected)
   }
 
   let active = "mathsoc";
+  let iframe_visible = false;
 
   function changecl (target) {
     if (target == 'mathsoc'){
@@ -49,6 +50,10 @@ function display (selected)
       document.getElementById("mathsoc").classList.add("active");
       document.getElementById(active).classList.remove("active");
       active = "mathsoc";
+      if(iframe_visible){
+        document.getElementById("video").classList.remove("active");
+        iframe_visible=false;
+      }
       }
     }
 
@@ -57,6 +62,10 @@ function display (selected)
       document.getElementById("pump").classList.add("active");
       document.getElementById(active).classList.remove("active");
       active = "pump";
+      if(iframe_visible){
+        document.getElementById("video").classList.remove("active");
+        iframe_visible=false;
+      }
       }
     }
 
@@ -64,6 +73,8 @@ function display (selected)
       if(active!="camp-explore"){
       document.getElementById("camp-explore").classList.add("active");
       document.getElementById(active).classList.remove("active");
+      document.getElementById("video").classList.add("active");
+      iframe_visible = true;
       active = "camp-explore";
       }
     }
@@ -73,6 +84,10 @@ function display (selected)
       document.getElementById("fffto").classList.add("active");
       document.getElementById(active).classList.remove("active");
       active = "fffto";
+      if(iframe_visible){
+        document.getElementById("video").classList.remove("active");
+        iframe_visible=false;
+      }
       }
     }
 
@@ -81,6 +96,10 @@ function display (selected)
       document.getElementById("stuco").classList.add("active");
       document.getElementById(active).classList.remove("active");
       active = "stuco";
+      if(iframe_visible){
+        document.getElementById("video").classList.remove("active");
+        iframe_visible=false;
+      }
       }
     }
 
@@ -89,6 +108,10 @@ function display (selected)
       document.getElementById("dance").classList.add("active");
       document.getElementById(active).classList.remove("active");
       active = "dance";
+      if(iframe_visible){
+        document.getElementById("video").classList.remove("active");
+        iframe_visible=false;
+      }
       }
     }
 
