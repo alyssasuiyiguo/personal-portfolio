@@ -289,27 +289,6 @@ header button{
   color: #d54864;
 }
 
-/**need to revisit this**/
-
-  /* On screens that are less than 700px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar button {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 400px) {
-    .sidebar button {
-      text-align: center;
-      float: none;
-    }
-  }
-
 /*****************/
 
   /**Main content of sidebar**/
@@ -359,6 +338,11 @@ header button{
     width: 1.6vw;
     height: 1.6vw;
     margin-left: 1vw;
+  }
+
+  .projects a img.devpost{
+    width: 2vw; 
+    height: 2vw;
   }
 
   .project{
@@ -640,3 +624,220 @@ input[type=text], input[type=email], select, textarea {
   
   /***************** RESPONSIVE DESIGN *************/
 
+  /***Changing hover text to on click for touch screen devices***/
+@media screen and (max-width: 801px) {
+  .project-pic:active .hover-text {
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+/**Resize Sidebar**/
+
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    /*Change font sizes*/
+    h4{
+      font-size: 16px; 
+  }
+  
+    /*title*/
+    h1{
+        font-size: 40px;
+    }
+    
+    /*subtitles*/
+    h3{
+        font-size: 28px;
+        line-height: 10px;
+    }
+
+    .main-page ol li::before{
+      font-size: 24px;
+      }
+    
+    /*project dates*/
+    h6{
+        font-family: 'Overpass Mono', monospace;
+        color:#d54864;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    p{
+        font-family: 'Palanquin', sans-serif;
+        color: #debda6;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    button{
+      padding: 14px;
+      border: 1px solid #d54864;
+      font-size: 14px;
+    }
+
+    hr{
+      width: 20%;
+    }
+
+    /***************HEADER*******************/
+    nav{
+      display: none; /*** come back to this ***/
+    }
+
+    /************INTRO*****************/
+    .intro{
+      margin: 20px;
+      padding-top: 40px;
+    }
+    /*************ABOUT ME*************/
+    .about-me{
+      display: inline-block;
+    }
+
+    /************CLUBS AND EXPERIENCE************/
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: inline;
+    }
+    .sidebar button {float: left;}
+    .content{
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .content #experience-title{
+      font-size: 18px;
+    }
+
+    .content #languages {
+      font-size: 18px;
+    }
+
+    /*********************PROJECTS SECTION***************************/
+    
+    .projects h3{
+      line-height: 35px;
+    }
+
+    .projects a img{
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .projects a img.devpost{
+      width: 28px; 
+      height: 28px;
+    }
+
+    .project{
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .project-text{
+        vertical-align: middle;
+    }
+
+    .project-pic{
+        display: inline-block;
+    }
+
+    .hover-text{
+        position: relative;
+        padding: 5px;
+        transition: .5s ease;
+        background-color: rgb(30, 19, 11, 0.9);
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .project-pic:active .hover-text {
+      opacity: 1;
+      z-index: 3;
+    }
+      
+    .project-pic img{
+      display: none;
+    }
+
+    .project-text-right{
+      text-align: center;
+    }
+
+    .project-text-left{
+      text-align: center;
+    }
+
+    .project-text-right .project-details{
+      z-index: 2;
+      position: static;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .project-text-left .project-details{
+      z-index: 2;
+      position: static;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .project-details p{
+      background-color:rgb(213, 72, 100, 0.6);
+      padding: 5px;
+    }
+
+    .project-text-right .project-details p{
+      padding: 0;
+    }
+
+    .project-text-left .project-details p{
+        padding: 0;
+    }
+
+  }
+
+
+  /**************FOR PHONES************************/
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 500px) {
+    /******************SIDEBAR AND BASIC LAYOUT************************************/
+    .left-sidebar{
+      display: none;
+    }
+
+    .main-page {
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 0;
+    }
+
+    .right-sidebar{
+      display: none;
+    }
+
+    .main-page ol.main {
+      margin: 0;
+      padding: 16px;
+    }
+    
+    .sidebar button {
+      text-align: center;
+      float: none;
+    }
+
+    .content{
+      height: 500px;
+      padding: 0px;
+    }
+
+    .content iframe{
+      width: 100%;
+      height: 350px;
+    }
+  }
