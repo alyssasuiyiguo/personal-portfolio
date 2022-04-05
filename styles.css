@@ -807,7 +807,7 @@ input[type=text], input[type=email], select, textarea {
   /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
   @media screen and (max-width: 500px) {
     /******************SIDEBAR AND BASIC LAYOUT************************************/
-    .left-sidebar{
+    .left-sidebar {
       display: none;
     }
 
@@ -817,7 +817,7 @@ input[type=text], input[type=email], select, textarea {
       padding-left: 0;
     }
 
-    .right-sidebar{
+    .right-sidebar {
       display: none;
     }
 
@@ -831,13 +831,69 @@ input[type=text], input[type=email], select, textarea {
       float: none;
     }
 
-    .content{
-      height: 500px;
+    .content {
+      height: fit-content;
       padding: 0px;
     }
 
-    .content iframe{
+    .content #experience-title {
+      margin: 10px;
+      margin-bottom: 0;
+    }
+
+    .content #thetext {
+      margin: 10px;
+      margin-top: 0;
+    }
+
+    .content #languages {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+
+    .content iframe {
       width: 100%;
       height: 350px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-title h3 {
+      font-size: 24px;
+    }
+
+    .project-text {
+      order: 1;
+    }
+
+    .hover-text {
+      opacity: 1;
+    }
+
+    .project-pic {
+      order: 2;
+    }
+
+    .projects a img{
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+    }
+
+    .projects a img.devpost{
+      width: 32px; 
+      height: 32px;
+    }
+
+    .awards-and-acheivements {
+      display: none;
+    }
+
+    .contact-me {
+      display: none;
     }
   }
